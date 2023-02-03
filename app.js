@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 3000
 const URI = process.env.MONGO_URI
 
 app.use(cors())
+app.use(express.static('./public'))
 app.use(express.json())
+app.get('/',(req, res)=>{
+
+})
 app.use('/api/v1/products', router)
 
   

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Api</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container">
+    <h1>Store Api</h1>
+    <a href="/api/v1/products">Go to the api </a>
+
+    <h2>Documentation</h2>
+    <p>
+        The database have 6 properties
+        <br>
+        1. name<br>
+        2. price<br>
+        3. featured<br>
+        4. rated<br>
+        5. createdAt<br>
+        6. company<br>
+    </p>
+
+    <h4>Filters</h4>
+    <p>
+        After the root url you can use a filter by supplying the ? and a key value pair. <hr>
+        1.<a href="https://storeapi-0t62.onrender.com/products?name=sofa">https://storeapi-0t62.onrender.com/products?name=sofa</a>
+        will return all the products with name sofa in it.
+        <hr>
+
+        2. <a href="https://storeapi-0t62.onrender.com/products?featured=true">https://storeapi-0t62.onrender.com/products?featured=true</a> 
+        will return all the feature products
+        <hr>
+        
+        3. <a href="https://storeapi-0t62.onrender.com/products?name=sofa&company=ikea">https://storeapi-0t62.onrender.com/products?name=sofa&company=ikea</a>
+        will return the products which have sofa in name and ikea is their company
+        <hr>
+
+        4. <a href="https://storeapi-0t62.onrender.com/products?name=sofa&fields=ikea">https://storeapi-0t62.onrender.com/products?name=sofa&fields=company</a>will return only the company values not other details.
+        <hr>
+        5. Add as many filters like that with & to append them.
+    </p>
+    <br><br>
+    <h4>Sorting and pagination</h4>
+    <p>
+    1. <a href="https://storeapi-0t62.onrender.com/products?sort=price">https://storeapi-0t62.onrender.com/products?sort=price</a> return the sorted products. Use -price to get descending order results.
+    <hr>
+    2. <a href="https://storeapi-0t62.onrender.com/products?page=1&limit=3">https://storeapi-0t62.onrender.com/products?page=1&limit=3</a> return the divide the products in pages where each page will have 3 products and it will return the 1st page.
+    by Default the limit is 10 and page is 1.
+    </p>
+    <br><br>
+    <h4>Numeric Filters</h4>
+    <p>
+    1. <a href="https://storeapi-0t62.onrender.com/products?price>200&sort=-price">https://storeapi-0t62.onrender.com/products?price>200&sort=-price</a> will filter the data with all product of price greater than 200 and then it will sort the results in desending order.
+    </p>
+    <br><br>
+    <h1>
+    Soon will be coming with more better Documentation....
+    </h1>
+</div>
+</body>
+</html>
