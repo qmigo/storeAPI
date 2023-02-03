@@ -20,15 +20,16 @@ const getAllProducts = async(req, res)=>{
     {
         queryObject.name = { $regex: name, $options: 'i' }
     }
-    const result = Product.find(queryObject) 
+    let result = Product.find(queryObject) 
+
     if(sort)
     {
         const sortList = sort.split(',').join(' ')
-        result.sort(sortList)
+        result = result.sort(sortList)
     }
     else
-    {
-        result.sort(createdAt)
+    {   
+        result = result.sort('createdAt')
     }
 
     if(fields)
